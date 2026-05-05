@@ -43,13 +43,25 @@
     const walk = (parent, target) => {
       parent.childNodes.forEach((node) => {
         if (node.nodeType === 3) {
-          const text = node.textContent || "";
-          for (const ch of text) {
-            const span = document.createElement("span");
-            span.className = "hero__split-letter";
-            span.textContent = ch === " " ? "\u00A0" : ch;
-            target.appendChild(span);
-          }
+          /* Split on whitespace — words get a no-break wrapper,
+             spaces become real text nodes so the browser wraps
+             only between words, never mid-word. */
+          const segments = (node.textContent || "").split(/(\s+)/);
+          segments.forEach((seg) => {
+            if (/^\s+$/.test(seg)) {
+              target.appendChild(document.createTextNode(" "));
+            } else if (seg) {
+              const wordWrap = document.createElement("span");
+              wordWrap.className = "hero__split-word";
+              for (const ch of seg) {
+                const span = document.createElement("span");
+                span.className = "hero__split-letter";
+                span.textContent = ch;
+                wordWrap.appendChild(span);
+              }
+              target.appendChild(wordWrap);
+            }
+          });
         } else if (node.nodeType === 1) {
           const clone = node.cloneNode(false);
           target.appendChild(clone);

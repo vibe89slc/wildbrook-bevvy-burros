@@ -615,6 +615,12 @@ p {
   font-variation-settings: "opsz" 144, "SOFT" 100;
 }
 
+/* Word wrapper — keeps letters together, lets breaks happen only between words */
+.hero__split-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .hero__split-letter {
   display: inline-block;
   transform: translateY(110%);
