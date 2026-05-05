@@ -133,8 +133,16 @@
     const totalPanels = panels.length;
 
     const setActive = (idx) => {
-      panels.forEach((p, i) => p.classList.toggle("is-active", i === idx));
-      dots.forEach((d, i) => d.setAttribute("aria-current", i === idx ? "true" : "false"));
+      panels.forEach((p, i) => {
+        const active = i === idx;
+        p.classList.toggle("is-active", active);
+        p.setAttribute("aria-hidden", active ? "false" : "true");
+      });
+      dots.forEach((d, i) => {
+        const active = i === idx;
+        d.setAttribute("aria-pressed", String(active));
+        d.setAttribute("aria-current", active ? "true" : "false");
+      });
       if (counterEl) {
         counterEl.textContent = String(idx + 1).padStart(2, "0");
       }
@@ -142,88 +150,69 @@
 
     let activeIdx = 0;
 
-    /* Desktop: scroll-driven pinning ---------------------------------- */
-    const setupDesktop = () => {
+    /* Unified scroll-driven setup — works on both desktop and mobile.
+       Desktop: 2-col panel. Mobile: top-image / bottom-copy panel.
+       Both use the same sticky-viewport + tall-rail mechanism.       */
+    const setupScrollDriven = () => {
       rail.style.setProperty("--showcase-panels", String(totalPanels));
-      const railRect = () => rail.getBoundingClientRect();
+
+      /* Cache each panel's parallax image element once */
+      const mediaImgs = panels.map((p) =>
+        p.querySelector(".showcase__media img, .showcase__media svg")
+      );
+
       const onScroll = () => {
-        const r = railRect();
+        const r = rail.getBoundingClientRect();
         const total = r.height - window.innerHeight;
         if (total <= 0) return;
-        const progress = Math.min(1, Math.max(0, -r.top / total));
-        const idx = Math.min(totalPanels - 1, Math.floor(progress * totalPanels));
+
+        const rawProgress = Math.min(1, Math.max(0, -r.top / total));
+        const idx = Math.min(totalPanels - 1, Math.floor(rawProgress * totalPanels));
+
         if (idx !== activeIdx) {
           activeIdx = idx;
           setActive(idx);
         }
+
+        /* Within-panel parallax: progress 0→1 within current panel's
+           scroll segment → translate image -10% to +10% */
+        if (!reduced) {
+          const panelProgress = rawProgress * totalPanels - idx; // 0 to 1
+          const shift = (panelProgress - 0.5) * 20; // -10% to +10%
+          const img = mediaImgs[idx];
+          if (img) img.style.transform = `translateY(${shift}%)`;
+        }
       };
+
       onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
       window.addEventListener("resize", onScroll, { passive: true });
-      return onScroll;
     };
 
-    /* Mobile: intersection-observer activation ------------------------ */
-    const setupMobile = () => {
-      rail.style.removeProperty("--showcase-panels");
-      panels.forEach((p) => p.classList.add("is-active"));
-      const mio = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const idx = panels.indexOf(entry.target);
-              if (idx >= 0 && idx !== activeIdx) {
-                activeIdx = idx;
-                setActive(idx);
-              }
-            }
-          });
-        },
-        { threshold: 0.55 }
-      );
-      panels.forEach((p) => mio.observe(p));
-    };
+    setupScrollDriven();
 
-    if (desktopMQ.matches && !reduced) {
-      setupDesktop();
-    } else {
-      setupMobile();
-    }
-
-    /* Dot click → scroll to corresponding viewport position ----------- */
+    /* Dot click: scroll to that panel's position in the rail ---------- */
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
         const idx = parseInt(dot.getAttribute("data-go") || "0", 10);
-        if (desktopMQ.matches) {
-          const r = rail.getBoundingClientRect();
-          const start = window.scrollY + r.top;
-          const total = r.height - window.innerHeight;
-          const target = start + (idx / totalPanels) * total + 4;
-          window.scrollTo({ top: target, behavior: reduced ? "auto" : "smooth" });
-        } else {
-          panels[idx].scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
-        }
+        const r = rail.getBoundingClientRect();
+        const start = window.scrollY + r.top;
+        const total = r.height - window.innerHeight;
+        const target = start + (idx / totalPanels) * total + 4;
+        window.scrollTo({ top: target, behavior: reduced ? "auto" : "smooth" });
       });
     });
 
-    /* Keyboard arrows on desktop -------------------------------------- */
+    /* Keyboard arrows while showcase is in view ----------------------- */
     document.addEventListener("keydown", (e) => {
-      if (!desktopMQ.matches) return;
-      const inViewport = rail.getBoundingClientRect().top < window.innerHeight * 0.5;
-      const stillIn = rail.getBoundingClientRect().bottom > window.innerHeight * 0.5;
-      if (!inViewport || !stillIn) return;
+      const r = rail.getBoundingClientRect();
+      if (r.top > window.innerHeight * 0.5 || r.bottom < window.innerHeight * 0.5) return;
       if (e.key === "ArrowDown" || e.key === "ArrowRight") {
         const next = Math.min(totalPanels - 1, activeIdx + 1);
-        if (next !== activeIdx) {
-          dots[next]?.click();
-          e.preventDefault();
-        }
+        if (next !== activeIdx) { dots[next]?.click(); e.preventDefault(); }
       } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
         const prev = Math.max(0, activeIdx - 1);
-        if (prev !== activeIdx) {
-          dots[prev]?.click();
-          e.preventDefault();
-        }
+        if (prev !== activeIdx) { dots[prev]?.click(); e.preventDefault(); }
       }
     });
   }
@@ -320,6 +309,51 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && lightbox.classList.contains("is-open")) close();
     });
+  }
+
+  /* ---------- Hero photo slideshow --------------------------------------- */
+  const heroImgs = Array.from(document.querySelectorAll(".hero__photo img"));
+  if (heroImgs.length > 1) {
+    let current = 0;
+    const cycle = () => {
+      heroImgs[current].classList.remove("is-active");
+      current = (current + 1) % heroImgs.length;
+      heroImgs[current].classList.add("is-active");
+    };
+    /* 4 500ms = ~3.5s fully visible + ~1s crossfade (CSS transition) */
+    setInterval(cycle, 3200);
+  }
+
+  /* ---------- Hero parallax (mobile only) -------------------------------- */
+  const heroPhoto = document.querySelector(".hero__photo");
+  if (heroPhoto && !reduced) {
+    const mobileMQ = window.matchMedia("(max-width: 720px)");
+    let ticking = false;
+
+    const applyParallax = () => {
+      if (!mobileMQ.matches) {
+        heroPhoto.style.transform = "";
+        return;
+      }
+      const scrolled = window.scrollY;
+      /* Photo translates DOWN by 35% of scroll distance, making it
+         appear to move UP more slowly than the page — classic parallax */
+      heroPhoto.style.transform = `translateY(${scrolled * 0.35}px)`;
+    };
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          applyParallax();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    /* Reset on orientation / resize */
+    window.addEventListener("resize", applyParallax, { passive: true });
+    applyParallax();
   }
 
   /* ---------- Animal profile sticky CTA --------------------------------- */

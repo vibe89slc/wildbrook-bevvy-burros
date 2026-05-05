@@ -59,16 +59,16 @@
   <header class="nav" id="topnav" role="banner">
     <a class="nav__brand" href="index.html" aria-label="Wildbrook Bevvy Burros — Home">
       <span class="nav__mark" aria-hidden="true">W</span>
-      <span>Wildbrook</span>
+      <span>Bevvy Burros</span>
     </a>
-    <nav class="nav__links" aria-label="Primary">
+    <nav class="nav__links" id="nav-panel" aria-label="Primary">
       <a href="#showcase">The herd</a>
       <a href="#packages">Packages</a>
       <a href="#venues">Venues</a>
       <a href="#book">Book</a>
     </nav>
     <a class="btn nav__cta" href="#book"><span>Book the herd</span><span class="btn__arrow" aria-hidden="true">→</span></a>
-    <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="topnav">
+    <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-panel">
       <span></span>
     </button>
   </header>
@@ -76,22 +76,23 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" aria-label="Introduction">
-      <div class="hero__mesh" aria-hidden="true"></div>
-      <div class="hero__grain" aria-hidden="true"></div>
-      <div class="hero__decor" aria-hidden="true">
-        <img class="hero__lantern hero__lantern--1" src="images/lantern.svg" alt="" loading="eager" />
-        <img class="hero__lantern hero__lantern--2" src="images/lantern.svg" alt="" loading="eager" />
-      </div>
-      <div class="hero__inner">
+      <!-- Left: text content panel -->
+      <div class="hero__panel">
         <p class="eyebrow hero__eyebrow">North Bend · Washington</p>
         <h1 class="hero__title js-split">The herd that <em>pours.</em></h1>
-        <div class="hero__bottom">
-          <p class="hero__lede">Mobile beverage service from the Snoqualmie Valley. Wedding aisles, garden parties, and corporate activations served by a crew of remarkably charming animals.</p>
-          <div class="hero__ctas">
-            <a class="btn btn--cream" href="#showcase"><span>Meet the herd</span><span class="btn__arrow" aria-hidden="true">↓</span></a>
-            <a class="btn btn--ghost" href="#book"><span>Book your event</span><span class="btn__arrow" aria-hidden="true">→</span></a>
-          </div>
+        <p class="hero__lede">Mobile beverage service from the Snoqualmie Valley. Wedding aisles, garden parties, and corporate activations served by a crew of remarkably charming animals.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--terra" href="#showcase"><span>Meet the herd</span><span class="btn__arrow" aria-hidden="true">↓</span></a>
+          <a class="btn btn--ghost" href="#book"><span>Book your event</span><span class="btn__arrow" aria-hidden="true">→</span></a>
         </div>
+      </div>
+      <!-- Right: full-height photo slideshow -->
+      <div class="hero__photo" aria-hidden="true">
+        <img src="images/hazel.jpg" alt="" loading="eager" class="is-active" />
+        <img src="images/atlas.jpg" alt="" loading="lazy" />
+        <img src="images/wren.jpg"  alt="" loading="lazy" />
+        <img src="images/beau.jpg"  alt="" loading="lazy" />
+        <div class="hero__photo-overlay"></div>
       </div>
       <div class="hero__scroll" aria-hidden="true"><span>Scroll</span></div>
     </section>
@@ -138,7 +139,7 @@
 
           <article class="showcase__panel is-active" data-panel="0" aria-labelledby="panel-hazel-name">
             <div class="showcase__media">
-              <img src="images/hazel.svg" alt="Hazel the mini donkey, illustrated portrait." loading="lazy" />
+              <img src="images/hazel.jpg" alt="A small donkey on a grassy field — placeholder for Hazel." loading="lazy" />
               <div class="showcase__media-label"><span>Hazel</span><span>32 inches</span></div>
             </div>
             <div class="showcase__copy">
@@ -152,13 +153,13 @@
                 <div class="showcase__stat"><dt>Snack</dt><dd>carrot tops</dd></div>
                 <div class="showcase__stat"><dt>Style</dt><dd>eucalyptus garland</dd></div>
               </dl>
-              <a class="btn btn--cream showcase__cta" href="hazel.html"><span>Visit Hazel's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+              <a class="btn showcase__cta" href="hazel.html"><span>Visit Hazel's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
             </div>
           </article>
 
-          <article class="showcase__panel" data-panel="1" aria-labelledby="panel-atlas-name">
+          <article class="showcase__panel" data-panel="1" aria-hidden="true" aria-labelledby="panel-atlas-name">
             <div class="showcase__media">
-              <img src="images/atlas.svg" alt="Atlas the pygmy goat, illustrated portrait." loading="lazy" />
+              <img src="images/atlas.jpg" alt="A baby goat in soft focus — placeholder for Atlas." loading="lazy" />
               <div class="showcase__media-label"><span>Atlas</span><span>22 inches</span></div>
             </div>
             <div class="showcase__copy">
@@ -172,13 +173,13 @@
                 <div class="showcase__stat"><dt>Snack</dt><dd>apple slices</dd></div>
                 <div class="showcase__stat"><dt>Style</dt><dd>knit bowtie</dd></div>
               </dl>
-              <a class="btn btn--cream showcase__cta" href="atlas.html"><span>Visit Atlas's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+              <a class="btn showcase__cta" href="atlas.html"><span>Visit Atlas's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
             </div>
           </article>
 
-          <article class="showcase__panel" data-panel="2" aria-labelledby="panel-wren-name">
+          <article class="showcase__panel" data-panel="2" aria-hidden="true" aria-labelledby="panel-wren-name">
             <div class="showcase__media">
-              <img src="images/wren.svg" alt="Wren the mini Highland cow, illustrated portrait." loading="lazy" />
+              <img src="images/wren.jpg" alt="Close-up of a fluffy Highland cow — placeholder for Wren." loading="lazy" />
               <div class="showcase__media-label"><span>Wren</span><span>38 inches</span></div>
             </div>
             <div class="showcase__copy">
@@ -192,13 +193,13 @@
                 <div class="showcase__stat"><dt>Snack</dt><dd>timothy hay</dd></div>
                 <div class="showcase__stat"><dt>Style</dt><dd>oak side-pack</dd></div>
               </dl>
-              <a class="btn btn--cream showcase__cta" href="wren.html"><span>Visit Wren's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+              <a class="btn showcase__cta" href="wren.html"><span>Visit Wren's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
             </div>
           </article>
 
-          <article class="showcase__panel" data-panel="3" aria-labelledby="panel-beau-name">
+          <article class="showcase__panel" data-panel="3" aria-hidden="true" aria-labelledby="panel-beau-name">
             <div class="showcase__media">
-              <img src="images/beau.svg" alt="Beau the Valais Blacknose sheep, illustrated portrait." loading="lazy" />
+              <img src="images/beau.jpg" alt="Sheep on a sunny alpine hillside — placeholder for Beau." loading="lazy" />
               <div class="showcase__media-label"><span>Beau</span><span>28 inches</span></div>
             </div>
             <div class="showcase__copy">
@@ -212,15 +213,15 @@
                 <div class="showcase__stat"><dt>Snack</dt><dd>orchard pears</dd></div>
                 <div class="showcase__stat"><dt>Style</dt><dd>flower crown</dd></div>
               </dl>
-              <a class="btn btn--cream showcase__cta" href="beau.html"><span>Visit Beau's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+              <a class="btn showcase__cta" href="beau.html"><span>Visit Beau's profile</span><span class="btn__arrow" aria-hidden="true">→</span></a>
             </div>
           </article>
 
-          <div class="showcase__nav" role="tablist" aria-label="Choose an animal">
-            <button type="button" data-go="0" aria-current="true" aria-label="Show Hazel"></button>
-            <button type="button" data-go="1" aria-label="Show Atlas"></button>
-            <button type="button" data-go="2" aria-label="Show Wren"></button>
-            <button type="button" data-go="3" aria-label="Show Beau"></button>
+          <div class="showcase__nav" role="group" aria-label="Choose an animal">
+            <button type="button" data-go="0" aria-pressed="true" aria-label="Show Hazel"></button>
+            <button type="button" data-go="1" aria-pressed="false" aria-label="Show Atlas"></button>
+            <button type="button" data-go="2" aria-pressed="false" aria-label="Show Wren"></button>
+            <button type="button" data-go="3" aria-pressed="false" aria-label="Show Beau"></button>
           </div>
         </div>
       </div>
@@ -259,8 +260,8 @@
 
         <div class="stats">
           <div class="stat reveal">
-            <span class="stat__num counter" data-counter="40">0</span>
-            <span class="stat__label">Weddings poured</span>
+            <span class="stat__num counter" data-counter="30">0</span>
+            <span class="stat__label">Mile service radius</span>
           </div>
           <div class="stat reveal reveal--delay-1">
             <span class="stat__num counter" data-counter="4">0</span>
@@ -282,9 +283,9 @@
     <section class="section packages" id="packages" aria-label="Packages">
       <div class="shell">
         <div class="section__head">
-          <p class="eyebrow reveal" style="color:var(--brass-soft);">03 — Packages</p>
+          <p class="eyebrow reveal">03 — Packages</p>
           <h2 class="reveal reveal--delay-1">Pour a service <em>that fits.</em></h2>
-          <p class="reveal reveal--delay-2" style="max-width:580px; color:rgba(246,239,226,0.78);">One-hour cocktail service is our signature. Add an animal, add an hour, add a beer steer. Final quotes after a discovery call.</p>
+          <p class="reveal reveal--delay-2" style="max-width:580px;">One-hour cocktail service is our signature. Add an animal, add an hour, add a beer steer. Final quotes after a discovery call.</p>
         </div>
         <div class="packages__grid">
           <article class="pkg reveal">
@@ -344,7 +345,8 @@
       <div class="shell">
         <div class="section__head">
           <p class="eyebrow reveal">04 — Venues</p>
-          <h2 class="reveal reveal--delay-1">Where the herd <em>has poured.</em></h2>
+          <h2 class="reveal reveal--delay-1">Where the herd <em>belongs.</em></h2>
+          <p class="reveal reveal--delay-2" style="max-width:580px; color:rgba(20,24,22,0.7);">We're actively building venue partnerships across the Snoqualmie Valley. If your venue is on this list — or should be — we'd love to talk.</p>
         </div>
         <div class="venues__grid">
           <ul class="venues__list">
@@ -370,10 +372,10 @@
             </li>
           </ul>
           <aside class="venues__partner reveal reveal--delay-2">
-            <p class="eyebrow" style="color:var(--brass-soft);">Venue partners</p>
-            <h3>Become a Wildbrook preferred venue.</h3>
-            <p style="color:rgba(246,239,226,0.78); margin-bottom:8px;">If you operate a venue and want the herd on your preferred list, we'd love to talk. Reduced rates, marketing collateral, and joint open-house events.</p>
-            <a class="btn btn--terra" href="mailto:venues@wildbrookbevvyburros.com"><span>Get in touch</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+            <p class="eyebrow" style="color:var(--cream);">Venue partners</p>
+            <h3>Be the first on the list.</h3>
+            <p style="color:rgba(246,239,226,0.92); margin-bottom:8px;">We're offering founding venue rates to early partners — cross-promotion, preferred pricing, and first access to new dates. A partnership that pays for itself at the first booking.</p>
+            <a class="btn btn--terra" href="mailto:venues@wildbrookbevvyburros.com"><span>Become a partner</span><span class="btn__arrow" aria-hidden="true">→</span></a>
           </aside>
         </div>
       </div>
@@ -384,7 +386,7 @@
       <div class="shell">
         <div class="booking__grid">
           <div class="booking__head">
-            <p class="eyebrow reveal" style="color:var(--brass-soft);">05 — Book</p>
+            <p class="eyebrow reveal" style="color:var(--cream);">05 — Book</p>
             <h2 class="reveal reveal--delay-1">Tell us about <em>your day.</em></h2>
             <p class="booking__lede reveal reveal--delay-2">We respond to every inquiry within 48 hours. A signed contract and non-refundable deposit reserve your date.</p>
             <div class="booking__contact reveal reveal--delay-3">
@@ -397,12 +399,12 @@
           <form class="booking__form reveal reveal--delay-2" id="booking-form" novalidate>
             <div class="field">
               <label for="bk-name">Your name</label>
-              <input id="bk-name" name="name" type="text" placeholder="First &amp; last" required />
+              <input id="bk-name" name="name" type="text" placeholder="First &amp; last" autocomplete="name" required />
             </div>
             <div class="field--row">
               <div class="field">
                 <label for="bk-email">Email</label>
-                <input id="bk-email" name="email" type="email" placeholder="you@email.com" required />
+                <input id="bk-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required />
               </div>
               <div class="field">
                 <label for="bk-date">Event date</label>
@@ -443,7 +445,7 @@
       <div class="footer__grid">
         <div>
           <p class="footer__brand">Wildbrook<br><em>Bevvy Burros.</em></p>
-          <p style="margin-top:18px; color:rgba(246,239,226,0.6); max-width:280px;">The herd that pours. Mobile beverage service from the Snoqualmie Valley.</p>
+          <p style="margin-top:18px; color:rgba(246,239,226,0.85); max-width:280px;">The herd that pours. Mobile beverage service from the Snoqualmie Valley.</p>
         </div>
         <div class="footer__col">
           <h4>The herd</h4>
