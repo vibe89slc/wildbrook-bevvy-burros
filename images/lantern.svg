@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 160" role="img" aria-label="Hanging lantern decorative motif">
+  <defs>
+    <radialGradient id="lantern-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd9a0" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#e89a4a" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#c66a3d" stop-opacity="0.4"/>
+    </radialGradient>
+    <linearGradient id="lantern-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2e22"/>
+      <stop offset="100%" stop-color="#1a1410"/>
+    </linearGradient>
+  </defs>
+  <line x1="50" y1="0" x2="50" y2="22" stroke="#1a1410" stroke-width="1.4"/>
+  <path d="M30,28 Q50,16 70,28 L66,32 Q50,22 34,32 Z" fill="url(#lantern-frame)"/>
+  <ellipse cx="50" cy="80" rx="32" ry="50" fill="url(#lantern-glow)"/>
+  <ellipse cx="50" cy="80" rx="28" ry="44" fill="none" stroke="#1a1410" stroke-width="1.4" opacity="0.8"/>
+  <line x1="22" y1="78" x2="78" y2="78" stroke="#1a1410" stroke-width="1.2" opacity="0.7"/>
+  <path d="M30,38 L70,38 L66,42 L34,42 Z" fill="url(#lantern-frame)"/>
+  <path d="M30,118 L70,118 L66,124 L34,124 Z" fill="url(#lantern-frame)"/>
+  <line x1="38" y1="124" x2="38" y2="138" stroke="#1a1410" stroke-width="1.2"/>
+  <line x1="50" y1="124" x2="50" y2="142" stroke="#1a1410" stroke-width="1.2"/>
+  <line x1="62" y1="124" x2="62" y2="138" stroke="#1a1410" stroke-width="1.2"/>
+  <circle cx="38" cy="140" r="2" fill="#3a2e22"/>
+  <circle cx="50" cy="144" r="2" fill="#3a2e22"/>
+  <circle cx="62" cy="140" r="2" fill="#3a2e22"/>
+</svg>

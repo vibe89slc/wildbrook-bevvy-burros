@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Stylized portrait of Wren the mini Highland cow">
+  <defs>
+    <linearGradient id="wren-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a5230"/>
+      <stop offset="55%" stop-color="#52391f"/>
+      <stop offset="100%" stop-color="#2a1f12"/>
+    </linearGradient>
+    <radialGradient id="wren-glow" cx="50%" cy="40%" r="42%">
+      <stop offset="0%" stop-color="#e8c8a0" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e8c8a0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wren-fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d49a5e"/>
+      <stop offset="55%" stop-color="#a4663a"/>
+      <stop offset="100%" stop-color="#6a3f24"/>
+    </linearGradient>
+    <linearGradient id="wren-snout" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="100%" stop-color="#1a0f0a"/>
+    </linearGradient>
+    <linearGradient id="wren-horn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0e4ce"/>
+      <stop offset="100%" stop-color="#9a8662"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#wren-bg)"/>
+  <ellipse cx="200" cy="200" rx="220" ry="180" fill="url(#wren-glow)"/>
+  <g transform="translate(200,280)">
+    <path d="M-130,-40 Q-160,-100 -130,-145" stroke="url(#wren-horn)" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M130,-40 Q160,-100 130,-145" stroke="url(#wren-horn)" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M-128,-145 L-118,-160 L-130,-145 Z" fill="#9a8662"/>
+    <path d="M128,-145 L118,-160 L130,-145 Z" fill="#9a8662"/>
+    <path d="M-120,-50 Q-140,-115 -100,-150 Q-80,-160 -65,-155 Q-90,-130 -90,-100" fill="url(#wren-fur)"/>
+    <path d="M120,-50 Q140,-115 100,-150 Q80,-160 65,-155 Q90,-130 90,-100" fill="url(#wren-fur)"/>
+    <path d="M-105,-30 Q-120,-110 -60,-140 Q-30,-150 0,-148 Q30,-150 60,-140 Q120,-110 105,-30 Q98,55 60,82 Q30,100 0,102 Q-30,100 -60,82 Q-98,55 -105,-30 Z" fill="url(#wren-fur)"/>
+    <path d="M-90,-110 Q-92,-95 -82,-92" stroke="#3a2418" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M90,-110 Q92,-95 82,-92" stroke="#3a2418" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M-95,-130 Q-92,-110 -82,-105 Q-94,-105 -100,-118 Z" fill="#52391f"/>
+    <path d="M95,-130 Q92,-110 82,-105 Q94,-105 100,-118 Z" fill="#52391f"/>
+    <path d="M-58,-90 Q-50,-130 -40,-145 Q-30,-148 -28,-140 Q-32,-110 -38,-86 Z" fill="#3a2418" opacity="0.45"/>
+    <path d="M58,-90 Q50,-130 40,-145 Q30,-148 28,-140 Q32,-110 38,-86 Z" fill="#3a2418" opacity="0.45"/>
+    <path d="M-32,-110 Q-22,-140 -12,-152 Q0,-156 12,-152 Q22,-140 32,-110 Q22,-100 0,-98 Q-22,-100 -32,-110 Z" fill="#3a2418"/>
+    <path d="M-42,-50 Q-46,-32 -38,-22" stroke="#3a2418" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M42,-50 Q46,-32 38,-22" stroke="#3a2418" stroke-width="3" fill="none" opacity="0.5"/>
+    <ellipse cx="-32" cy="-22" rx="11" ry="13" fill="#1a1410"/>
+    <ellipse cx="32" cy="-22" rx="11" ry="13" fill="#1a1410"/>
+    <ellipse cx="-29" cy="-26" rx="3.5" ry="4.5" fill="#f6efe2"/>
+    <ellipse cx="35" cy="-26" rx="3.5" ry="4.5" fill="#f6efe2"/>
+    <path d="M-46,46 Q-52,18 -32,8 Q-12,2 0,2 Q12,2 32,8 Q52,18 46,46 Q32,72 0,74 Q-32,72 -46,46 Z" fill="url(#wren-snout)"/>
+    <ellipse cx="-18" cy="28" rx="4" ry="5" fill="#0a0805"/>
+    <ellipse cx="18" cy="28" rx="4" ry="5" fill="#0a0805"/>
+    <path d="M-12,52 Q0,58 12,52" stroke="#1a1410" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(200,420)">
+    <path d="M-100,0 L100,0 L94,18 L-94,18 Z" fill="#7a3a2a"/>
+    <path d="M-94,3 L94,3 L90,15 L-90,15 Z" fill="#a4533a"/>
+    <path d="M-50,3 L-30,3 L-32,15 L-52,15 Z" fill="#5a2418" opacity="0.7"/>
+    <path d="M30,3 L50,3 L52,15 L32,15 Z" fill="#5a2418" opacity="0.7"/>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Wedding table styling scene placeholder">
+  <defs>
+    <linearGradient id="tbl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="100%" stop-color="#1a1410"/>
+    </linearGradient>
+    <radialGradient id="tbl-glow" cx="50%" cy="60%" r="55%">
+      <stop offset="0%" stop-color="#e8a868" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#e8a868" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#tbl-bg)"/>
+  <rect width="600" height="400" fill="url(#tbl-glow)"/>
+  <ellipse cx="300" cy="320" rx="280" ry="50" fill="#5a3422"/>
+  <ellipse cx="300" cy="312" rx="270" ry="42" fill="#a47452"/>
+  <g transform="translate(150,260)">
+    <rect x="-12" y="-50" width="24" height="50" rx="4" fill="#e8d8b8"/>
+    <ellipse cx="0" cy="-50" rx="6" ry="3" fill="#ffd9a0"/>
+    <ellipse cx="0" cy="-58" rx="4" ry="9" fill="#ffd9a0" opacity="0.92"/>
+  </g>
+  <g transform="translate(300,255)">
+    <path d="M-20,0 Q-25,-30 -10,-32 Q0,-36 10,-32 Q25,-30 20,0 Z" fill="#5a8a4a"/>
+    <circle cx="-12" cy="-22" r="6" fill="#c89aa8"/>
+    <circle cx="0" cy="-30" r="7" fill="#e8c8d8"/>
+    <circle cx="10" cy="-22" r="6" fill="#c89aa8"/>
+    <circle cx="-6" cy="-12" r="4" fill="#fff2c8"/>
+    <circle cx="6" cy="-14" r="5" fill="#fff2c8"/>
+  </g>
+  <g transform="translate(450,260)">
+    <rect x="-10" y="-44" width="20" height="44" rx="3" fill="#e8d8b8"/>
+    <ellipse cx="0" cy="-44" rx="5" ry="2.5" fill="#ffd9a0"/>
+    <ellipse cx="0" cy="-50" rx="3" ry="7" fill="#ffd9a0" opacity="0.9"/>
+  </g>
+  <g transform="translate(80,280)">
+    <ellipse cx="0" cy="0" rx="20" ry="6" fill="#3a2418"/>
+    <ellipse cx="0" cy="-2" rx="20" ry="6" fill="#a47452"/>
+  </g>
+  <g transform="translate(520,278)">
+    <ellipse cx="0" cy="0" rx="22" ry="6" fill="#3a2418"/>
+    <ellipse cx="0" cy="-2" rx="22" ry="6" fill="#a47452"/>
+  </g>
+</svg>

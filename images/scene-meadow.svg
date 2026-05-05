@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Meadow scene placeholder">
+  <defs>
+    <linearGradient id="meadow-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8d4a8"/>
+      <stop offset="60%" stop-color="#d8a878"/>
+      <stop offset="100%" stop-color="#a87852"/>
+    </linearGradient>
+    <linearGradient id="meadow-mts" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4a3a"/>
+      <stop offset="100%" stop-color="#2a3d2c"/>
+    </linearGradient>
+    <linearGradient id="meadow-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7a3a"/>
+      <stop offset="100%" stop-color="#3a5028"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#meadow-sky)"/>
+  <circle cx="450" cy="120" r="48" fill="#fff2c8" opacity="0.8"/>
+  <path d="M0,280 Q120,210 240,250 Q360,200 480,240 Q540,210 600,230 L600,400 L0,400 Z" fill="url(#meadow-mts)"/>
+  <path d="M0,310 Q120,260 240,290 Q360,260 480,280 Q540,270 600,280 L600,400 L0,400 Z" fill="url(#meadow-grass)"/>
+  <g opacity="0.6">
+    <line x1="40" y1="370" x2="42" y2="354" stroke="#7a9a52" stroke-width="2"/>
+    <line x1="80" y1="376" x2="82" y2="360" stroke="#7a9a52" stroke-width="2"/>
+    <line x1="180" y1="372" x2="182" y2="356" stroke="#7a9a52" stroke-width="2"/>
+    <line x1="280" y1="380" x2="282" y2="362" stroke="#7a9a52" stroke-width="2"/>
+    <line x1="380" y1="376" x2="382" y2="358" stroke="#7a9a52" stroke-width="2"/>
+    <line x1="480" y1="382" x2="482" y2="364" stroke="#7a9a52" stroke-width="2"/>
+    <line x1="540" y1="378" x2="542" y2="360" stroke="#7a9a52" stroke-width="2"/>
+  </g>
+</svg>

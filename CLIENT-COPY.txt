@@ -1,0 +1,272 @@
+================================================================================
+WILDBROOK BEVVY BURROS — EDITABLE COPY DOC
+================================================================================
+
+This file mirrors every word that appears on the live site. Edit this doc,
+send it back, and we'll port the copy across all pages. Anything inside
+[brackets] is a note for the editor — not site copy.
+
+================================================================================
+GLOBAL
+================================================================================
+
+BUSINESS NAME ........... Wildbrook Bevvy Burros
+TAGLINE ................. The herd that pours.
+LOCATION ................ North Bend, Washington · Snoqualmie Valley
+EMAIL ................... hello@wildbrookbevvyburros.com
+PHONE ................... (425) 555-0142
+INSTAGRAM ............... @wildbrookbevvyburros
+SERVICE RADIUS .......... Snoqualmie Valley, Greater Seattle, the I-90 corridor
+
+================================================================================
+HOMEPAGE — index.html
+================================================================================
+
+[NAV]
+- Home
+- The Herd
+- Packages
+- Venues
+- Book
+
+[HERO]
+EYEBROW: North Bend · Washington
+HEADLINE: The herd that pours.
+SUBHEAD: Mobile beverage service from the Snoqualmie Valley. Wedding
+         aisles, garden parties, and corporate activations served by a crew
+         of remarkably charming animals.
+PRIMARY CTA: Meet the herd
+SECONDARY CTA: Book your event
+
+[MARQUEE STRIP]
+Weddings · Festivals · Private parties · Corporate activations · Photo
+moments · Beer steers · Tequila donkeys · Snoqualmie · Mt. Si · North
+Bend · Cascades · Brunch hour · Cocktail hour ·
+
+[SECTION — THE HERD / SHOWCASE SLIDER]
+EYEBROW: 01 — The herd
+HEADLINE: Four servers. One unforgettable hour.
+SUBHEAD: Each member of the Wildbrook crew is hand-trained, well-groomed,
+         and bonded to their handler. Scroll to meet them.
+
+[SECTION — WHY THE WILDBROOK WAY]
+EYEBROW: 02 — Why us
+HEADLINE: The standard, set higher.
+SUBHEAD: We're a small team that obsesses over the details so your guests
+         can stay in the moment.
+
+PILLAR 1
+TITLE: TIPS-certified handlers
+BODY: Every Wildbrook handler is alcohol-service certified in Washington.
+      We're trained for beer steers, weddings, and crowds.
+
+PILLAR 2
+TITLE: Leave-no-trace
+BODY: Our animals wear discreet collection bags. We arrive on a quiet
+      schedule and leave the venue cleaner than we found it.
+
+PILLAR 3
+TITLE: Custom dressing
+BODY: Florals from your designer, lights, ribbon, monograms. The herd
+      arrives styled for your day, not ours.
+
+PILLAR 4
+TITLE: Pacific Northwest, born and raised
+BODY: Each animal is sourced and raised within a 30-mile radius of Mt. Si.
+      We know our valleys and we know our venues.
+
+[SECTION — PACKAGES]
+EYEBROW: 03 — Packages
+HEADLINE: Pour a service that fits.
+SUBHEAD: One-hour cocktail service is our signature. Add an animal, add an
+         hour, add a beer steer. Pricing is a placeholder — final quotes
+         after a discovery call.
+
+PACKAGE 1 — THE WILD
+PRICE: from $750
+INCLUDES: One bonded pair (donkeys, goat duo, or sheep duo) · 1-hour
+          service · 30-min styling window · One certified handler ·
+          Custom basket dressing · Travel within 30 miles
+BEST FOR: Intimate gatherings, engagement parties, brunch socials.
+
+PACKAGE 2 — THE HARVEST
+PRICE: from $1,150
+INCLUDES: Two species · 1-hour service · 30-min styling window · Two
+          certified handlers · Custom basket dressing · Photographer-
+          friendly choreography · Travel within 30 miles
+BEST FOR: Weddings, milestone birthdays, brand activations.
+
+PACKAGE 3 — THE WHOLE HERD
+PRICE: from $1,800
+INCLUDES: Three species (your pick of three) · 1-hour service · 45-min
+          styling window · Three certified handlers · Custom basket
+          dressing · Photographer-friendly choreography · Premium florals
+          · Travel within 50 miles
+BEST FOR: Festival-grade weddings, corporate flagship events.
+
+[SECTION — VENUES]
+EYEBROW: 04 — Venues
+HEADLINE: Where the herd has poured.
+SUBHEAD: A short list of Snoqualmie Valley venues we already love. Tell us
+         where you're hosting and we'll let you know if we've worked there.
+
+VENUE LIST:
+- Meadowbrook Farm — North Bend
+- North Fork Farm Events — Snoqualmie
+- Evergreen Meadows — Snoqualmie
+- TreeHouse Point — Issaquah
+- Snoqualmie Falls Lodge Lawn — Snoqualmie
+
+PARTNER CTA: If you operate a venue and want the herd on your preferred
+             list, we'd love to talk.
+
+[SECTION — BOOKING]
+EYEBROW: 05 — Book
+HEADLINE: Tell us about your day.
+SUBHEAD: We respond to every inquiry within 48 hours. A signed contract
+         and a non-refundable deposit reserve your date.
+
+FORM FIELDS:
+- Your name
+- Email
+- Event date
+- Venue or city
+- Package interest
+- Anything we should know
+
+SUCCESS MESSAGE: You're in. The herd just got an alert. We'll be in touch
+                 within 48 hours.
+
+[FOOTER]
+COLUMN 1: Wildbrook Bevvy Burros · The herd that pours.
+COLUMN 2 LINKS: Hazel · Atlas · Wren · Beau
+COLUMN 3 LINKS: Packages · Venues · Book
+LEGAL: © 2026 Wildbrook Bevvy Burros · Built by VIBE89
+
+================================================================================
+ANIMAL PROFILE — HAZEL (hazel.html)
+================================================================================
+
+NAME: Hazel
+SPECIES: Mini Donkey
+TAGLINE: The aisle pro.
+HERO PHOTO ALT: Hazel the mini donkey wearing eucalyptus garland.
+
+STORY:
+PARAGRAPH 1: Hazel is the diplomat of the Wildbrook crew. She is the one
+             you want at your ceremony — patient through processions, calm
+             with kids, and uncannily aware of camera angles.
+PARAGRAPH 2: She arrived at Wildbrook in 2023 as a rescue from a hobby
+             farm in Roslyn. Her bonded best friend Juniper travels
+             everywhere she does. Where Hazel goes, Juniper follows.
+PARAGRAPH 3: She has worked over forty weddings and has not once, not
+             ever, sneezed on the bride.
+
+STATS:
+- Height ........ 32"
+- Age ........... 7
+- Bonded with ... Juniper
+- Best at ....... aisle walks, photo lines
+- Snack ......... carrot tops
+- Style ......... eucalyptus garland, soft brass bell
+
+GALLERY [6 photo placeholders]
+
+CTA: Add Hazel to your event
+
+================================================================================
+ANIMAL PROFILE — ATLAS (atlas.html)
+================================================================================
+
+NAME: Atlas
+SPECIES: Pygmy Goat
+TAGLINE: The mischief.
+
+STORY:
+PARAGRAPH 1: Atlas is small. Atlas is opinionated. Atlas will, given the
+             chance, climb your bar cart. We don't recommend leaving him
+             unsupervised next to the cake.
+PARAGRAPH 2: He is, however, the single best icebreaker we have ever
+             worked with. Guests who walk in stiff leave the cocktail
+             hour holding a phone full of goat photos and a softer mood.
+PARAGRAPH 3: He works best at festivals, brand activations, and any event
+             where you want guests laughing within ninety seconds of
+             arriving.
+
+STATS:
+- Height ........ 22"
+- Age ........... 4
+- Bonded with ... a herd of three
+- Best at ....... festivals, brand booths
+- Snack ......... apple slices
+- Style ......... knit bowtie, leather bell collar
+
+GALLERY [6 photo placeholders]
+
+CTA: Add Atlas to your event
+
+================================================================================
+ANIMAL PROFILE — WREN (wren.html)
+================================================================================
+
+NAME: Wren
+SPECIES: Mini Highland Cow ("Beer Steer")
+TAGLINE: The marquee.
+
+STORY:
+PARAGRAPH 1: Wren is what most guests have never seen in person and what
+             every guest will photograph. She is the original Wildbrook
+             beer steer — fluffy, calm, and built for the slow circuit
+             through a cocktail hour.
+PARAGRAPH 2: She wears a custom oak side-pack designed for tall cans and
+             stemmed flutes. Her handler walks her on a soft lead at the
+             pace of a careful conversation.
+PARAGRAPH 3: Reserve Wren early. She is in our most-requested rotation
+             May through October.
+
+STATS:
+- Height ........ 38"
+- Age ........... 3
+- Bonded with ... her handler Margot
+- Best at ....... cocktail hour, marketing reels
+- Snack ......... timothy hay
+- Style ......... oak side-pack, tartan ribbon
+
+GALLERY [6 photo placeholders]
+
+CTA: Add Wren to your event
+
+================================================================================
+ANIMAL PROFILE — BEAU (beau.html)
+================================================================================
+
+NAME: Beau
+SPECIES: Valais Blacknose Sheep
+TAGLINE: The fairytale.
+
+STORY:
+PARAGRAPH 1: Beau looks like he wandered out of a storybook because, in a
+             way, he did. Valais Blacknose are native to the Swiss Alps
+             and remain one of the rarest breeds in the United States.
+PARAGRAPH 2: He has the temperament of a golden retriever in a sheep
+             body. Guests reach for him without thinking. He is a puppy
+             in a wool coat, and he is the only one of his kind on the
+             Wildbrook roster.
+PARAGRAPH 3: Beau requires a slightly slower service tempo. We pair him
+             with experienced handlers and venues with a quiet corner.
+
+STATS:
+- Height ........ 28"
+- Age ........... 2
+- Bonded with ... his handler Theo
+- Best at ....... weddings, editorial shoots
+- Snack ......... orchard pears
+- Style ......... linen ribbon, dried-flower crown
+
+GALLERY [6 photo placeholders]
+
+CTA: Add Beau to your event
+
+================================================================================
+END
+================================================================================
