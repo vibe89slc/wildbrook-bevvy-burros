@@ -1193,11 +1193,51 @@ p {
   /* Copy fills bottom row */
   .showcase__copy {
     grid-row: 2;
-    padding: 20px var(--gutter) 80px;
+    padding: 20px var(--gutter) 32px;
     max-width: none;
     gap: 10px;
     overflow-y: auto;
     align-self: start;
+  }
+
+  /* Hide the name/height label — CTA takes its spot on the image */
+  .showcase__media-label {
+    display: none;
+  }
+
+  /* Lift CTA onto the image as a frosted pill, matching label position */
+  .showcase__cta.btn {
+    position: absolute;
+    bottom: calc(46svh + 14px);
+    left: var(--gutter);
+    z-index: 6;
+    /* Frosted pill — same treatment as the old media label */
+    display: inline-flex;
+    background: rgba(255, 250, 240, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--ink);
+    border: none;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 12px rgba(43, 38, 32, 0.18);
+    transform: none;
+    width: auto;
+  }
+
+  .showcase__cta.btn::before {
+    display: none;
+  }
+
+  .showcase__cta.btn:hover,
+  .showcase__cta.btn:focus-visible {
+    background: rgba(255, 250, 240, 1);
+    transform: none;
+    color: var(--terra-deep);
   }
 
   .showcase__index {
