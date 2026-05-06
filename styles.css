@@ -199,14 +199,33 @@ p {
   opacity: 0.7;
 }
 
-/* Editorial drop-cap helper for animal stories */
+/* Editorial drop-cap — filigree badge */
 .editorial > p:first-of-type::first-letter {
   font-family: var(--font-display);
-  font-size: 4em;
+  font-size: 6.2em;
+  font-style: italic;
+  font-weight: 500;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
   float: left;
-  line-height: 0.85;
-  margin: 0.05em 0.12em -0.05em 0;
-  color: var(--terra-deep);
+  line-height: 0.78;
+  margin: 0.02em 0.1em -0.04em 0;
+  color: var(--cream);
+  padding: 0.1em 0.18em 0.14em;
+  border-radius: 5px;
+  /* Stack:
+     1 — SVG filigree (corner brackets + diamond side-marks in brass)
+     2 — diagonal gloss sheen
+     3 — terra base colour                                             */
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120' preserveAspectRatio='none'%3E%3Crect x='4' y='4' width='92' height='112' rx='2' fill='none' stroke='%23e8c890' stroke-width='1' stroke-opacity='0.45'/%3E%3Cpath d='M4,22 L4,4 L22,4' fill='none' stroke='%23e8c890' stroke-width='2.5' stroke-opacity='0.8' stroke-linecap='round'/%3E%3Cpath d='M78,4 L96,4 L96,22' fill='none' stroke='%23e8c890' stroke-width='2.5' stroke-opacity='0.8' stroke-linecap='round'/%3E%3Cpath d='M4,98 L4,116 L22,116' fill='none' stroke='%23e8c890' stroke-width='2.5' stroke-opacity='0.8' stroke-linecap='round'/%3E%3Cpath d='M78,116 L96,116 L96,98' fill='none' stroke='%23e8c890' stroke-width='2.5' stroke-opacity='0.8' stroke-linecap='round'/%3E%3Cpath d='M50,1.5 L53.5,5 L50,8.5 L46.5,5 Z' fill='%23e8c890' fill-opacity='0.7'/%3E%3Cpath d='M50,111.5 L53.5,115 L50,118.5 L46.5,115 Z' fill='%23e8c890' fill-opacity='0.7'/%3E%3Cpath d='M1.5,60 L5,63.5 L8.5,60 L5,56.5 Z' fill='%23e8c890' fill-opacity='0.7'/%3E%3Cpath d='M91.5,60 L95,63.5 L98.5,60 L95,56.5 Z' fill='%23e8c890' fill-opacity='0.7'/%3E%3C/svg%3E")
+    center / 100% 100% no-repeat,
+    linear-gradient(135deg, rgba(255,255,255,0.11) 0%, transparent 42%, rgba(0,0,0,0.09) 100%),
+    var(--terra);
+  /* Outer brass ring + warm lift shadow + inner top gloss */
+  box-shadow:
+    0 6px 26px rgba(181, 92, 48, 0.44),
+    0 0 0 1.5px rgba(200, 165, 106, 0.65),
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.22);
 }
 
 /* ---------- Layout primitives ------------------------------------------- */
@@ -909,24 +928,15 @@ p {
   object-fit: cover;
 }
 
-.showcase__panel.is-active .showcase__media {
-  animation: kenBurns 8s var(--ease-in-out) infinite alternate;
-}
-
-@keyframes kenBurns {
-  0% {
-    transform: scale(1) translateY(0);
-  }
-  100% {
-    transform: scale(1.08) translateY(-2%);
-  }
-}
-
 .showcase__media img,
 .showcase__media svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  will-change: transform;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.12s linear;
 }
 
 .showcase__media-label {
@@ -949,15 +959,20 @@ p {
 
 .showcase__copy {
   display: grid;
-  gap: 14px;
+  gap: 10px;
   max-width: 540px;
   align-self: center;
   min-width: 0;
 }
 
+/* Zero out default p margins inside copy — gap handles all spacing */
+.showcase__copy p {
+  margin: 0;
+}
+
 .showcase__index {
   font-family: var(--font-display);
-  font-size: 80px;
+  font-size: 56px;
   line-height: 1;
   color: var(--terra);
   font-variation-settings: "opsz" 144;
@@ -1018,7 +1033,7 @@ p {
 .showcase__tagline {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(20px, 2vw, 26px);
+  font-size: clamp(17px, 1.6vw, 22px);
   color: var(--ink-soft);
   line-height: 1.3;
 }
@@ -1026,9 +1041,9 @@ p {
 .showcase__stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px 24px;
+  gap: 10px 24px;
   border-top: 1px solid rgba(74, 67, 56, 0.18);
-  padding-top: var(--space-5);
+  padding-top: 10px;
 }
 
 .showcase__stat {
@@ -1157,14 +1172,11 @@ p {
     overflow: hidden;
   }
 
-  /* Extra height on the img so parallax has room to travel */
   .showcase__media img,
   .showcase__media svg {
-    height: 120%;
-    top: -10%;
-    position: relative;
-    will-change: transform;
-    transition: transform 0.1s linear;
+    height: 100%;
+    top: 0;
+    position: static;
   }
 
   /* Soft bottom edge blends photo into the copy area */

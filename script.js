@@ -186,13 +186,13 @@
           setActive(idx);
         }
 
-        /* Within-panel parallax: progress 0→1 within current panel's
-           scroll segment → translate image -10% to +10% */
+        /* Scroll-driven zoom: as you scroll through each panel's segment
+           the image scales from 1.0 → 1.18, giving a push-in feel */
         if (!reduced) {
           const panelProgress = rawProgress * totalPanels - idx; // 0 to 1
-          const shift = (panelProgress - 0.5) * 20; // -10% to +10%
+          const scale = 1 + panelProgress * 0.18;
           const img = mediaImgs[idx];
-          if (img) img.style.transform = `translateY(${shift}%)`;
+          if (img) img.style.transform = `scale(${scale.toFixed(4)})`;
         }
       };
 
