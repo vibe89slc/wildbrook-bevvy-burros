@@ -2267,6 +2267,79 @@ p {
   font-style: italic;
 }
 
+/* ---------- Page hero (About / Packages / Our Herd / Contact) ---------- */
+
+.page-hero {
+  position: relative;
+  min-height: 56vh;
+  padding: 140px var(--gutter) clamp(48px, 6vw, 96px);
+  display: grid;
+  align-items: end;
+  color: var(--cream);
+  background: var(--moss-dark);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.page-hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 24, 22, 0.25) 0%, rgba(20, 24, 22, 0.72) 100%);
+}
+
+.page-hero__bg img,
+.page-hero__bg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: kenBurns 14s var(--ease-in-out) infinite alternate;
+}
+
+.page-hero__inner {
+  width: min(100% - var(--gutter) * 2, var(--shell-max));
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-5);
+  position: relative;
+}
+
+.page-hero__eyebrow {
+  color: var(--brass-soft);
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(48px, 9vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin: 0;
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+}
+
+.page-hero__title em {
+  font-style: italic;
+  color: var(--peach);
+}
+
+.page-hero__lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 26px);
+  color: rgba(246, 239, 226, 0.86);
+  max-width: 620px;
+  line-height: 1.45;
+  margin: 0;
+}
+
 /* ---------- Reveal utilities -------------------------------------------- */
 
 .reveal {

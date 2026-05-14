@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Wildbrook Bevvy Burros · Book the herd</title>
+  <meta name="description" content="Tell us about your day. Wildbrook Bevvy Burros responds to every inquiry within 48 hours. Mobile beverage burros for weddings, parties, and brand activations in the Snoqualmie Valley." />
+  <meta name="theme-color" content="#2a3d2c" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://wildbrookbevvyburros.com/contact.html" />
+  <meta property="og:title" content="Contact — Wildbrook Bevvy Burros" />
+  <meta property="og:description" content="Book the herd. We respond to every inquiry within 48 hours." />
+  <meta property="og:image" content="https://wildbrookbevvyburros.com/images/og-image.svg" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="nav nav--on-dark" id="topnav" role="banner">
+    <a class="nav__brand" href="index.html" aria-label="Wildbrook Bevvy Burros — Home">
+      <span class="nav__mark" aria-hidden="true">W</span>
+      <span>Bevvy Burros</span>
+    </a>
+    <nav class="nav__links" id="nav-panel" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="packages.html">Packages</a>
+      <a href="herd.html">Our Herd</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="btn nav__cta" href="#book"><span>Book the herd</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+    <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-panel"><span></span></button>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-label="Contact">
+      <div class="page-hero__bg" aria-hidden="true">
+        <img src="images/scene-table.jpg?v=3" alt="" />
+      </div>
+      <div class="page-hero__inner">
+        <p class="eyebrow page-hero__eyebrow">Book</p>
+        <h1 class="page-hero__title">Tell us about <em>your day.</em></h1>
+        <p class="page-hero__lede">We respond to every inquiry within 48 hours. A signed contract and a non-refundable deposit reserve your date.</p>
+      </div>
+    </section>
+
+    <section class="section booking" id="book" aria-label="Book the herd">
+      <div class="shell">
+        <div class="booking__grid">
+          <div class="booking__head">
+            <p class="eyebrow reveal" style="color:var(--cream);">Reach out</p>
+            <h2 class="reveal reveal--delay-1">Let's pair the right <em>donkeys.</em></h2>
+            <p class="booking__lede reveal reveal--delay-2">Send the details below and we'll come back inside two business days with a quote, availability, and the pair we'd recommend for your event.</p>
+            <div class="booking__contact reveal reveal--delay-3">
+              <div><strong style="color:var(--cream);">Email</strong><br><a href="mailto:hello@wildbrookbevvyburros.com">hello@wildbrookbevvyburros.com</a></div>
+              <div><strong style="color:var(--cream);">Phone</strong><br><a href="tel:+14255550142">(425) 555-0142</a></div>
+              <div><strong style="color:var(--cream);">Service area</strong><br>Snoqualmie Valley, Greater Seattle, the I-90 corridor</div>
+              <div><strong style="color:var(--cream);">Reply window</strong><br>48 hours · Mon–Fri</div>
+            </div>
+          </div>
+
+          <form class="booking__form reveal reveal--delay-2" id="booking-form" novalidate>
+            <div class="field">
+              <label for="bk-name">Your name</label>
+              <input id="bk-name" name="name" type="text" placeholder="First &amp; last" autocomplete="name" required />
+            </div>
+            <div class="field--row">
+              <div class="field">
+                <label for="bk-email">Email</label>
+                <input id="bk-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="bk-date">Event date</label>
+                <input id="bk-date" name="date" type="date" />
+              </div>
+            </div>
+            <div class="field--row">
+              <div class="field">
+                <label for="bk-venue">Venue or city</label>
+                <input id="bk-venue" name="venue" type="text" placeholder="Where are you hosting?" />
+              </div>
+              <div class="field">
+                <label for="bk-package">Package interest</label>
+                <select id="bk-package" name="package">
+                  <option>The Wild — from $750 · 1 donkey pair</option>
+                  <option selected>The Harvest — from $1,150 · 2 donkey pairs</option>
+                  <option>The Whole Herd — from $1,800 · all four donkeys</option>
+                  <option>Not sure yet — let's chat</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="bk-msg">Anything we should know</label>
+              <textarea id="bk-msg" name="message" placeholder="Tell us about your event, guest count, or special requests."></textarea>
+            </div>
+            <button class="btn btn--terra booking__submit" type="submit"><span>Send the inquiry</span><span class="btn__arrow" aria-hidden="true">→</span></button>
+            <div class="booking__success" id="booking-success" role="status" aria-live="polite">
+              You're in. The herd just got an alert. We'll be in touch within 48 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section venues" aria-label="Venues we love">
+      <div class="shell">
+        <div class="section__head">
+          <p class="eyebrow reveal">Where we work</p>
+          <h2 class="reveal reveal--delay-1">Snoqualmie Valley <em>and out.</em></h2>
+          <p class="reveal reveal--delay-2" style="max-width:580px; color:rgba(20,24,22,0.7);">A short list of Snoqualmie Valley venues we already love. Tell us where you're hosting and we'll let you know if we've worked there.</p>
+        </div>
+        <div class="venues__grid">
+          <ul class="venues__list">
+            <li class="reveal">
+              <span class="venues__name">Meadowbrook Farm</span>
+              <span class="venues__city">North Bend</span>
+            </li>
+            <li class="reveal">
+              <span class="venues__name">North Fork Farm Events</span>
+              <span class="venues__city">Snoqualmie</span>
+            </li>
+            <li class="reveal">
+              <span class="venues__name">Evergreen Meadows</span>
+              <span class="venues__city">Snoqualmie</span>
+            </li>
+            <li class="reveal">
+              <span class="venues__name">TreeHouse Point</span>
+              <span class="venues__city">Issaquah</span>
+            </li>
+            <li class="reveal">
+              <span class="venues__name">Snoqualmie Falls Lodge Lawn</span>
+              <span class="venues__city">Snoqualmie</span>
+            </li>
+          </ul>
+          <aside class="venues__partner reveal reveal--delay-2">
+            <p class="eyebrow" style="color:var(--cream);">Venue partners</p>
+            <h3>Be on the list.</h3>
+            <p style="color:rgba(246,239,226,0.92); margin-bottom:8px;">We're building founding-partner relationships with Snoqualmie Valley venues — cross-promotion, preferred pricing, first access to new dates.</p>
+            <a class="btn btn--terra" href="mailto:venues@wildbrookbevvyburros.com"><span>Become a partner</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="herd" aria-label="All four donkey profiles">
+      <div class="herd__head">
+        <div>
+          <p class="eyebrow">Profiles</p>
+          <h2>Read the four <em>stories.</em></h2>
+        </div>
+        <a class="btn" href="#book"><span>Book the herd</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="herd__grid">
+        <a class="herd-card" href="rufus.html">
+          <div class="herd-card__media"><img src="images/rufus.jpg?v=3" alt="Rufus the mini donkey." /></div>
+          <div class="herd-card__body">
+            <p class="herd-card__species">Mini Donkey</p>
+            <h3 class="herd-card__name">Rufus</h3>
+            <p class="herd-card__tag">The marquee.</p>
+          </div>
+        </a>
+        <a class="herd-card" href="sol.html">
+          <div class="herd-card__media"><img src="images/sol.jpg?v=3" alt="Sol the mini donkey." /></div>
+          <div class="herd-card__body">
+            <p class="herd-card__species">Mini Donkey</p>
+            <h3 class="herd-card__name">Sol</h3>
+            <p class="herd-card__tag">The sunshine.</p>
+          </div>
+        </a>
+        <a class="herd-card" href="hazel.html">
+          <div class="herd-card__media"><img src="images/hazel.jpg?v=3" alt="Hazel the mini donkey." /></div>
+          <div class="herd-card__body">
+            <p class="herd-card__species">Mini Donkey</p>
+            <h3 class="herd-card__name">Hazel</h3>
+            <p class="herd-card__tag">The aisle pro.</p>
+          </div>
+        </a>
+        <a class="herd-card" href="atlas.html">
+          <div class="herd-card__media"><img src="images/atlas.jpg?v=3" alt="Atlas the mini donkey." /></div>
+          <div class="herd-card__body">
+            <p class="herd-card__species">Mini Donkey</p>
+            <h3 class="herd-card__name">Atlas</h3>
+            <p class="herd-card__tag">The mischief.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="shell">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Wildbrook<br><em>Bevvy Burros.</em></p>
+          <p style="margin-top:18px; color:rgba(246,239,226,0.85); max-width:280px;">The herd that pours. Mobile beverage service from the Snoqualmie Valley.</p>
+        </div>
+        <div class="footer__col">
+          <h4>The herd</h4>
+          <ul class="footer__links">
+            <li><a href="rufus.html">Rufus</a></li>
+            <li><a href="sol.html">Sol</a></li>
+            <li><a href="hazel.html">Hazel</a></li>
+            <li><a href="atlas.html">Atlas</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Site</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="herd.html">Our Herd</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Find us</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@wildbrookbevvyburros.com">Email</a></li>
+            <li><a href="tel:+14255550142">(425) 555-0142</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Wildbrook Bevvy Burros · North Bend, WA</span>
+        <span>Web Design by <a href="https://vibe89.com" target="_blank" rel="noopener" style="color:var(--brass-soft);">Vibe89.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
